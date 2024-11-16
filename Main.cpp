@@ -9,7 +9,7 @@
 int main() {
 	
 	//Define pile parameters
-	double pileLength = 20.0;	//m
+	double pileLength = 10.0;	//m
 	double stiffness = 1e5;		//Pa
 	double area = 0.8;			//m^2
 	double spring = 500;		//N/m
