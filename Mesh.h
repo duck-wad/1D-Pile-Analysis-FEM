@@ -33,8 +33,8 @@ protected:
 	void Solve();
 	void PrintResults() const;
 
-	void PrintMatrix(std::vector<std::vector<double>> mat) const;
-	void PrintVector(std::vector<double> vec) const;
+	void PrintMatrix(const std::vector<std::vector<double>>& mat) const;
+	void PrintVector(const std::vector<double>& vec) const;
 
 	void SetStiffness(size_t row, size_t col, double val);
 	void SetForce(size_t row, double val);

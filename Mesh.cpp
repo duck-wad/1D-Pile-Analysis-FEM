@@ -169,7 +169,7 @@ void Mesh::Solve() {
 	}
 }
 
-void Mesh::PrintMatrix(std::vector<std::vector<double>> mat) const {
+void Mesh::PrintMatrix(const std::vector<std::vector<double>>& mat) const {
 
 	for (size_t i = 0; i < mat.size(); ++i) {
 		for (size_t j = 0; j < mat[i].size(); ++j) {
@@ -180,7 +180,7 @@ void Mesh::PrintMatrix(std::vector<std::vector<double>> mat) const {
 	std::cout << std::endl;
 }
 
-void Mesh::PrintVector(std::vector<double> vec) const {
+void Mesh::PrintVector(const std::vector<double>& vec) const {
 	for (size_t i = 0; i < vec.size(); ++i) {
 		std::cout << "Node " << i << ": " << vec[i] << std::endl;
 	}
@@ -189,7 +189,9 @@ void Mesh::PrintVector(std::vector<double> vec) const {
 
 void Mesh::PrintResults() const {
 
-	std::cout << "Nodal displacements: " << std::endl;
+	/*std::cout << "Nodal displacements: " << std::endl;
 	PrintVector(globalDisplacement);
-	std::cout << std::endl;
+	std::cout << std::endl;*/
+
+	std::cout << "Surface settlement: " << globalDisplacement[0] << " [m]" << std::endl;
 }

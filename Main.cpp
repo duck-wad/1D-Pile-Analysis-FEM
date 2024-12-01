@@ -9,8 +9,8 @@
 int main() {
 	
 	//Define pile parameters
-	double pileLength = 10.0;	//m
-	double stiffness = 1e5;		//Pa
+	double pileLength = 20.0;	//m
+	double stiffness = 1e6;		//Pa
 	double area = 0.8;			//m^2
 	double spring = 500;		//N/m
 
@@ -19,7 +19,7 @@ int main() {
 	double concentratedLoad = 1000.0;		//N
 
 	//Define number of elements
-	int numElements = 100;
+	int numElements = 1000;
 
 	//Initialize the mesh
 	Mesh mesh(pileLength, numElements, stiffness, area, spring, distributedLoad, concentratedLoad);
