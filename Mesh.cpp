@@ -17,12 +17,7 @@ Element::Element(double L, double E, double A, double k, double p_bar, double P)
 			}
 			stiffnessMatrix[i][j] = ((A * E) / L) * c1 + ((k * L) / 3) * c2;
 		}
-
-		if (i == 0) {
-			forceVector[i] = -1 * (p_bar * L) / 2 + P;
-		}
-		else
-			forceVector[i] = (p_bar * L) / 2 + P;
+		forceVector[i] = (p_bar * L) / 2 + P;
 	}
 }
 
